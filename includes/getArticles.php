@@ -2,6 +2,7 @@
 
 include_once "connect.php";
 
+// sql to get the products from the db
 $sql = "SELECT `products`.*, `categories`.`category_name`, `users`.`user_name` FROM `products` LEFT JOIN `categories` ON `products`.`product_category` = `categories`.`category_id` LEFT JOIN `users` ON `products`.`product_addedby` = `users`.`user_id`";
 $statement = $conn->prepare($sql);
 $statement->execute();
@@ -12,7 +13,7 @@ while ($row = $statement->fetch()) { ?>
     <?php
     $remainingStars = 5 - (int)$row['product_stars'];
     ?>
-    <article>
+    <article data-category="<?php echo $row['category_name'] ?>">
         <img src="img/<?php echo $row['product_img'] ?>" alt="<?php echo $row['product_imgalt'] ?>">
         <div class="info">
             <h3><?php echo $row['product_name'] ?></h3>
