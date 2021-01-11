@@ -7,7 +7,7 @@
             <?php
             include_once "includes/getcategories.php";
             foreach ($categories as $category => $value) { ?>
-                <li><a href="#"><?php echo $value ?></a></li>
+                <li><a href="#" class="category" data-category="<?php echo $value ?>"><?php echo $value ?></a></li>
             <?php } ?>
         </ul>
     </div>
