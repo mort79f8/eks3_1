@@ -1,7 +1,10 @@
 // Variabler
-$headers: "Karla", sans-serif;
-$base: "Lato", sans-serif;
-$navFont: "Oswald", sans-serif;
+$headers: "Karla",
+sans-serif;
+$base: "Lato",
+sans-serif;
+$navFont: "Oswald",
+sans-serif;
 
 :root {
     font-size: 18px;
@@ -21,14 +24,14 @@ $navFont: "Oswald", sans-serif;
             height: 22px;
         }
 
-        > div,
-        > span {
+        >div,
+        >span {
             border: 1px solid #808080;
             padding: 4px 8px;
             background: #f5f5f5;
         }
 
-        > span {
+        >span {
             padding-top: 6px;
         }
     }
@@ -55,6 +58,7 @@ $navFont: "Oswald", sans-serif;
     img {
         height: 50px;
     }
+
     h2 {
         display: inline-block;
         padding: 0px 10px;
@@ -116,6 +120,7 @@ $navFont: "Oswald", sans-serif;
 .login {
     padding: 10px;
     font-family: $headers;
+
     form {
         display: inline-block;
     }
@@ -141,7 +146,7 @@ $navFont: "Oswald", sans-serif;
 // CreateArticle
 //
 
-.createArticle form > div {
+.createArticle form>div {
     display: flex;
     padding: 10px;
 
@@ -153,6 +158,17 @@ $navFont: "Oswald", sans-serif;
     textarea {
         flex: 1;
     }
+}
+
+//
+// Register-user
+//
+
+.register-user {
+    display: grid;
+    grid-template-columns: 150px 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
 }
 
 main {
@@ -168,17 +184,17 @@ main {
             font-weight: lighter;
         }
 
-        > div {
+        >div {
             padding: 0 20px;
             margin-bottom: 20px;
             font-family: $navFont;
             color: #666;
 
-            > div:first-child {
+            >div:first-child {
                 background: darken(#eee, 10%);
             }
 
-            > div:nth-child(2) {
+            >div:nth-child(2) {
                 background: #eee;
                 font-family: $headers;
 
@@ -279,6 +295,7 @@ main {
                     color: #333;
                     background: rgba(255, 255, 255, 0.3);
                 }
+
                 // background: url("../img/kategoriHerre.jpg") no-repeat center center;
                 // background-size: cover;
                 // // height: calc(((60vw - 250px) /2 ) * .6666);
@@ -310,6 +327,7 @@ main {
                     color: #333;
                     background: rgba(255, 255, 255, 0.3);
                 }
+
                 // background: url("../img/kategoriKvinde.jpg") no-repeat center center;
                 // background-size: cover;
                 // // height: calc(((60vw - 250px) /2 ) * .6666);
@@ -334,6 +352,7 @@ main {
                 img {
                     width: 100%;
                 }
+
                 .info {
                     text-align: center;
                     padding: 20px;
@@ -348,6 +367,7 @@ main {
                         }
                     }
                 }
+
                 .description {
                     background: #f5f5f5;
                     padding: 20px 20px 0 20px;
@@ -512,7 +532,7 @@ h6 {
         display: none;
     }
 
-    form > div {
+    form>div {
         display: flex;
         margin-top: 20px;
         flex-direction: column;
@@ -529,7 +549,7 @@ h6 {
 }
 
 @media screen and (max-width: 400px) {
-    form > div:first-child {
+    form>div:first-child {
         font-size: 0.8rem;
     }
 
