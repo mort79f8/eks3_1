@@ -160,7 +160,7 @@ sans-serif;
     }
 }
 
-//
+// added by Morten
 // Register-user
 //
 
@@ -170,6 +170,13 @@ sans-serif;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 10px;
 }
+
+.clearFilters {
+    font-style: italic;
+}
+
+// end added by Morten
+
 
 main {
     display: flex;

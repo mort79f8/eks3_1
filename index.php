@@ -38,12 +38,12 @@ include_once 'header.php';
         <h3>INSPIRATION</h3>
         <hr>
         <div class="inspiration">
-            <div class="catMen">
+            <div class="catMen" data-gender="male">
                 <img src="img/kategoriHerre.jpg" alt="">
                 <h5>Herretøj</h5>
                 <div class="action">Lær mere</div>
             </div>
-            <div class="catWomen">
+            <div class="catWomen" data-gender="female">
                 <img src="img/kategoriKvinde.jpg" alt="">
                 <h5>Kvindetøj</h5>
                 <div class="action">Lær mere</div>

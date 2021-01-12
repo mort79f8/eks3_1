@@ -13,7 +13,7 @@ while ($row = $statement->fetch()) { ?>
     <?php
     $remainingStars = 5 - (int)$row['product_stars'];
     ?>
-    <article data-category="<?php echo $row['category_name'] ?>">
+    <article data-category="<?php echo $row['category_name'] ?>" data-gender="<?php echo $row['product_gender'] ?>">
         <img src="img/<?php echo $row['product_img'] ?>" alt="<?php echo $row['product_imgalt'] ?>">
         <div class="info">
             <h3><?php echo $row['product_name'] ?></h3>
@@ -31,7 +31,9 @@ while ($row = $statement->fetch()) { ?>
         </div>
         <div class="description">
             <div class="published">
-                Oprettet: <?php echo $row['product_added'] ?> af <?php echo $row['user_name'] ?>
+                <?PHP setlocale(LC_TIME, "da-DK"); ?>
+                Oprettet: <?php echo date("D d-m-Y", strtotime($row['product_added'])) ?> af <?php echo $row['user_name'] ?>
+                <!-- Oprettet: <?php echo $row['product_added'] ?> af <?php echo $row['user_name'] ?> -->
             </div>
             <p><?php echo $row['product_desc'] ?>
                 <a href="#">Læs mere...</a>

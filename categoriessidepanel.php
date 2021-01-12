@@ -9,6 +9,7 @@
             foreach ($categories as $category => $value) { ?>
                 <li><a href="#" class="category" data-category="<?php echo $value ?>"><?php echo $value ?></a></li>
             <?php } ?>
+            <li><a href="#" class="clearFilters hidden">Reset filters</a></li>
         </ul>
     </div>
 </div>

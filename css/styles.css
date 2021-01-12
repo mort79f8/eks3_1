@@ -175,6 +175,10 @@
   row-gap: 10px;
 }
 
+.clearFilters {
+  font-style: italic;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
