@@ -53,11 +53,21 @@ session_start();
     <div class="container navbar">
         <nav>
             <ul>
-                <li class="active"><a href="index.php">Forside</a></li>
-                <li><a href="#">Produkter</a></li>
-                <li><a href="#">Nyheder</a></li>
-                <li><a href="#">Handelsbetingelser</a></li>
-                <li><a href="#">Om os</a></li>
+                <li class=<?php if ($active == "index") {
+                                echo "active";
+                            } ?>><a href="index.php">Forside</a></li>
+                <li class=<?php if ($active == "products") {
+                                echo "active";
+                            } ?>><a href="#">Produkter</a></li>
+                <li class=<?php if ($active == "news") {
+                                echo "active";
+                            } ?>><a href="#">Nyheder</a></li>
+                <li class=<?php if ($active == "terms") {
+                                echo "active";
+                            } ?>><a href="#">Handelsbetingelser</a></li>
+                <li class=<?php if ($active == "about") {
+                                echo "active";
+                            } ?>><a href="#">Om os</a></li>
                 <?php
                 if (isset($_SESSION['username'])) {
                 ?>
@@ -65,7 +75,9 @@ session_start();
                 <?php } else { ?>
                     <li><a href='#' class='loginBtn'>Log ind</a></li>
                 <?php } ?>
-                <li><a href='register.php' class='loginBtn'>Opret bruger</a></li>
+                <li class=<?php if ($active == "register") {
+                                echo "active";
+                            } ?>><a href='register.php' class='loginBtn'>Opret bruger</a></li>
             </ul>
         </nav>
         <div class="basket">

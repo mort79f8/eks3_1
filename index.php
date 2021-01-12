@@ -1,6 +1,7 @@
 <?php
 $title = "Forside - FancyClothes.dk";
 $meta_desc = "Velkommen til FancyClothes.dk";
+$active = "index";
 include_once 'header.php';
 ?>
 

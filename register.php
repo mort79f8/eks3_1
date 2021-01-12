@@ -1,6 +1,7 @@
 <?php
 $title = "Opret bruger - FancyClothes.dk";
-$meta_desc = "Velkommen til FancyClothes.dk";
+$meta_desc = "Velkommen til FancyClothes.dk bruger registreing";
+$active = "register";
 include_once "header.php";
 
 $errormsg = "";
@@ -34,6 +35,8 @@ if (isset($_POST['username'])) {
 }
 
 ?>
+
+
 <div class="container">
     <div class="register-error"><?php echo $errormsg ?></div>
     <form action="" method="POST" class="register-user">
