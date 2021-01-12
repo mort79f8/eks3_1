@@ -11,8 +11,10 @@ $statement->execute();
 while ($row = $statement->fetch()) { ?>
 
     <?php
+    // figure out how many stars the product have and sets the remainingStars, we can change the 5 to how many max stars we want.
     $remainingStars = 5 - (int)$row['product_stars'];
     ?>
+    <!-- use data- to set a custom param that we can use in f.eks. javascript. -->
     <article data-category="<?php echo $row['category_name'] ?>" data-gender="<?php echo $row['product_gender'] ?>">
         <img src="img/<?php echo $row['product_img'] ?>" alt="<?php echo $row['product_imgalt'] ?>">
         <div class="info">
@@ -31,7 +33,9 @@ while ($row = $statement->fetch()) { ?>
         </div>
         <div class="description">
             <div class="published">
+                <!-- set local to danish (do not seems to work?) -->
                 <?PHP setlocale(LC_TIME, "da-DK"); ?>
+                <!-- date(D d-m-Y) is the format, output would be example: Mon 21-08-2021 -->
                 Oprettet: <?php echo date("D d-m-Y", strtotime($row['product_added'])) ?> af <?php echo $row['user_name'] ?>
                 <!-- Oprettet: <?php echo $row['product_added'] ?> af <?php echo $row['user_name'] ?> -->
             </div>
@@ -39,6 +43,15 @@ while ($row = $statement->fetch()) { ?>
                 <a href="#">Læs mere...</a>
             </p>
             <!-- Mulighed for sletning herunder -->
+            <?php if (isset($_SESSION['userlevel']) and $_SESSION['userlevel'] == 1) { ?>
+                <div>
+                    <a href="includes/removeproduct.php?id=<?php echo $row['product_id'] ?>&img=img/<?php echo $row['product_img'] ?>" class="delete-product-link">fjern product</a>
+                </div>
+            <?php } elseif (isset($_SESSION['userlevel']) and $_SESSION['userlevel'] == 2 and $row['user_name'] == $_SESSION['username']) { ?>
+                <div>
+                    <a href="includes/removeproduct.php?id=<?php echo $row['product_id'] ?>&img=img/<?php echo $row['product_img'] ?>" class="delete-product-link">fjern product</a>
+                </div>
+            <?php } ?>
         </div>
     </article>
 
