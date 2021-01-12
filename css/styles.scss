@@ -171,8 +171,48 @@ sans-serif;
     row-gap: 10px;
 }
 
+
+
+.update-user {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+
+    a {
+        padding-left: 10px;
+    }
+}
+
+
 .clearFilters {
     font-style: italic;
+}
+
+#users {
+    margin: auto;
+}
+
+table {
+    margin: auto;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid black;
+}
+
+table a {
+    text-decoration: none;
+    color: blue;
 }
 
 // end added by Morten

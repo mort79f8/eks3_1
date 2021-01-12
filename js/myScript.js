@@ -6,6 +6,7 @@ $(document).ready(function(){
 	});
 });
 
+
 // filters
 // lavet efter samtale med tvillingerne.
 // get all the article, this is a nodelist not a normal array!

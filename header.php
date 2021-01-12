@@ -76,9 +76,18 @@ session_start();
                 <?php } else { ?>
                     <li><a href='#' class='loginBtn'>Log ind</a></li>
                 <?php } ?>
-                <li class=<?php if ($active == "register") {
-                                echo "active";
-                            } ?>><a href='register.php' class='loginBtn'>Opret bruger</a></li>
+                <?php if (!isset($_SESSION['username'])) { ?>
+                    <li class=<?php if ($active == "register") {
+                                    echo "active";
+                                } ?>><a href='register.php' class='loginBtn'>Opret bruger</a></li>
+                <?php } ?>
+                <?php if (isset($_SESSION['username']) && $_SESSION['userlevel'] == 1) { ?>
+                    <li class=<?php if ($active == "admin") {
+                                    echo "active";
+                                } ?>><a href='admin.php' class='loginBtn'>Administration</a></li>
+                <?php } ?>
+
+
             </ul>
         </nav>
         <div class="basket">
