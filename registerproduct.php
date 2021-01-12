@@ -48,3 +48,9 @@
         <input type="submit" value="Opret" name="value">
     </div>
 </form>
+<script src="https://cdn.tiny.cloud/1/t2l9q829856mxvexmdqhz95prmv4f4by281bbei6336amu67/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea'
+    });
+</script>
