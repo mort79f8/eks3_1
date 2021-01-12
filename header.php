@@ -25,6 +25,7 @@ session_start();
     <link rel="stylesheet" href="css/slider.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/t2l9q829856mxvexmdqhz95prmv4f4by281bbei6336amu67/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 
 <body>
