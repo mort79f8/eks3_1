@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 // morgan is a logger middleware.
 const morgan = require('morgan');
 const mysql = require('mysql');
@@ -18,6 +19,7 @@ function getConnection() {
     return pool;
 }
 
+app.use(cors());
 app.use(morgan('short'));
 
 // get all the products and return a json.

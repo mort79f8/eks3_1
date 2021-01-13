@@ -15,7 +15,6 @@ let articles = document.querySelectorAll('article');
 let categories = document.querySelectorAll('.category');
 let resetFilters = document.querySelector('.clearFilters');
 
-console.log(categories);
 
 // add eventlistener to each link 
 categories.forEach(category => {
