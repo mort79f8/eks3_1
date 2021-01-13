@@ -171,10 +171,14 @@ sans-serif;
     row-gap: 10px;
 }
 
-
+.update-container {
+    display: flex;
+    justify-content: center;
+}
 
 .update-user {
-    display: grid;
+    display: inline-grid;
+    margin: auto;
     grid-template-columns: 150px 150px;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 10px;
@@ -214,6 +218,14 @@ table a {
     text-decoration: none;
     color: blue;
 }
+
+.info-update {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+
 
 // end added by Morten
 

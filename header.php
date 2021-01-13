@@ -54,6 +54,7 @@ session_start();
     <div class="container navbar">
         <nav>
             <ul>
+                <!-- check for the active variable and set the class. -->
                 <li class=<?php if ($active == "index") {
                                 echo "active";
                             } ?>><a href="index.php">Forside</a></li>

@@ -175,9 +175,19 @@
   row-gap: 10px;
 }
 
+.update-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .update-user {
-  display: -ms-grid;
-  display: grid;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  margin: auto;
   -ms-grid-columns: 150px 150px;
       grid-template-columns: 150px 150px;
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
@@ -217,6 +227,17 @@ td {
 table a {
   text-decoration: none;
   color: blue;
+}
+
+.info-update {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  border: 1px solid black;
 }
 
 main {

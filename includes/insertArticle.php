@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../css/styles.css">
 <?php
 session_start();
 global $_FILES;
@@ -47,7 +48,7 @@ if ($uploadOk == 0) {
     // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+        // echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
 
         $productimgpath = htmlspecialchars(basename($_FILES["fileToUpload"]["name"]));
         $productimgalt = $_POST['imgAlt'];
@@ -70,8 +71,9 @@ if ($uploadOk == 0) {
         $statement->bindParam(7, $productcategory);
         $statement->bindParam(8, $productgender);
         $statement->execute();
-
+        echo "<div class='info-update'>";
         echo "<br>Produkt tilføjet";
+        echo "</div>";
         header("Refresh:3; url=../index.php", true, 303);
     } else {
         echo "Sorry, there was an error uploading your file.";

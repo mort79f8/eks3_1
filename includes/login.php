@@ -23,7 +23,8 @@ if ($row = $statement->fetch()) {
     $statement->execute([$username]);
     if ($row = $statement->fetch()) {
         session_start();
-        $_SESSION['pass_error'] = "1";
+        // $_SESSION['pass_error'] = "1";
+        echo "Forkert password";
         header("location: ../index.php");
     } else {
         header("location: ../index.php");

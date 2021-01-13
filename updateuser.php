@@ -6,7 +6,7 @@ include_once 'header.php';
 
 $id = $_GET['id'];
 ?>
-<div class="container">
+<div class="container update-container">
     <?php
     include_once 'includes/getuserbyid.php';
     ?>
